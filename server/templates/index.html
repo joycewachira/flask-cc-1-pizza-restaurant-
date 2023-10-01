@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to Pizza Finder</title>
+</head>
+<body style="font-family: Arial, sans-serif; text-align: center; background-color: #f4f4f4; padding: 20px;">
+
+    <h1 style="color: #333;">Welcome to Pizza Finder</h1>
+
+    <h2 style="color: #666;">Restaurants</h2>
+    <ul style="list-style-type: none; padding: 0;">
+        {% for restaurant in restaurants %}
+            <li style="margin: 10px; background-color: #fff; padding: 10px; border: 1px solid #ccc;">
+                {{ restaurant.name }} - {{ restaurant.address }}
+            </li>
+        {% endfor %}
+    </ul>
+
+    <h2 style="color: #666;">Pizzas</h2>
+    <ul style="list-style-type: none; padding: 0;">
+        {% for pizza in pizzas %}
+            <li style="margin: 10px; background-color: #fff; padding: 10px; border: 1px solid #ccc;">
+                {{ pizza.name }} - Ingredients: {{ pizza.ingredients }}
+            </li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
